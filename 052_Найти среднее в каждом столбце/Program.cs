@@ -9,11 +9,13 @@
 Console.Clear();
 
 Console.WriteLine("Задаем двумерный массив.");
-int quantityRows  = ReadInt("введите количество строк в массиве: ");
+int quantityRows = ReadInt("введите количество строк в массиве: ");
 int quantityColumns = ReadInt("введите количество столбцов в массиве: ");
 
 int[,] matr = FillMatrix(quantityRows, quantityColumns);
 PrintMatrix(matr);
+Console.WriteLine();
+Console.Write($"Среднее арифметическое каждого столбца: ");
 ColumnAverage(matr);
 
 
@@ -52,15 +54,16 @@ void PrintMatrix(int[,] matrix)
 
 void ColumnAverage(int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
         double averageColumn = 0;
         double sumColumn = 0;
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(0); j++)
         {
-            sumColumn  += matrix[j, i];
+            sumColumn += matrix[j, i];
         }
-        averageColumn = sumColumn / quantityColumns;
+        averageColumn = sumColumn / quantityRows;
         Console.Write(Math.Round(averageColumn, 1) + "  ");
     }
+
 }

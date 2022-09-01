@@ -11,7 +11,7 @@ int m = Convert.ToInt32(Console.ReadLine()); // строки
 Console.WriteLine("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine()); // столбцы
 
-double [,] matrix = FillMatrix(m, n);
+double[,] matrix = FillMatrix(m, n);
 PrintMatrix(matrix);
 
 

@@ -8,7 +8,7 @@
 Console.Clear();
 
 Console.WriteLine("Задаем двумерный массив.");
-int quantityRows  = ReadInt("введите количество строк в массиве: ");
+int quantityRows = ReadInt("введите количество строк в массиве: ");
 int quantityColumns = ReadInt("введите количество столбцов в массиве: ");
 
 int[,] matr = FillMatrix(quantityRows, quantityColumns);
@@ -50,7 +50,7 @@ int[,] FillMatrix(int rows, int columns)
     return matrix;
 }
 
-void PrintMatrix(int [,] matrix)
+void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
