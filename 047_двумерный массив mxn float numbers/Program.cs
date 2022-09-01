@@ -43,5 +43,3 @@ void PrintMatrix(double[,] matrix)
         Console.WriteLine();
     }
 }
-
-
